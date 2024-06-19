@@ -1,4 +1,4 @@
-from .views import TodoViewSet, AdminTodoViewSet
+from .views import TodoViewSet
 
 from rest_framework.routers import SimpleRouter
 
