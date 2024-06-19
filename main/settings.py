@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
     "rest_framework_simplejwt",
+    "drf_spectacular",
     # Local apps
     "accounts.apps.AccountsConfig",
     "todo.apps.TodoConfig",
@@ -154,6 +155,7 @@ REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.IsAuthenticated",
     ],
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
 SIMPLE_JWT = {
@@ -170,3 +172,10 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "DRF Todo API",
+    "DESCRIPTION": "Todo-api for react frontend",
+    "VERSION": "1.0.0",
+}

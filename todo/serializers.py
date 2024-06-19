@@ -21,5 +21,5 @@ class TodoSerializer(serializers.ModelSerializer):
             "is_due",
         ]
 
-    def get_is_due(self, obj):
+    def get_is_due(self, obj) -> bool:
         return timezone.now() > obj.due_date if obj.due_date else False
