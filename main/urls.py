@@ -11,15 +11,15 @@ urlpatterns = [
     path("api-auth/", include("rest_framework.urls")),
     path("todo/", include("todo.urls")),
     path("accounts/", include("accounts.urls")),
-    path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
+    path("schema/", SpectacularAPIView.as_view(), name="schema"),
     path(
-        "api/schema/redoc/",
-        SpectacularRedocView.as_view(url_name="redoc_schema"),
+        "redoc/",
+        SpectacularRedocView.as_view(url_name="schema"),
         name="redoc",
     ),
     path(
-        "api/schema/swagger-ui/",
-        SpectacularSwaggerView.as_view(url_name="swagger_schema"),
+        "swagger-ui/",
+        SpectacularSwaggerView.as_view(url_name="schema"),
         name="swagger-ui",
     ),
 ]

@@ -11,6 +11,9 @@ class TodoViewSet(ModelViewSet):
     authentication_classes = [JWTAuthentication]
     serializer_class = TodoSerializer
     permission_classes = [IsOwner]
+    lookup_field = "pk"
+    lookup_url_kwarg = "id"
+    lookup_value_regex = "[0-9]+"
 
     def get_queryset(self):
         if not self.request.user.is_authenticated:
@@ -25,10 +28,3 @@ class TodoViewSet(ModelViewSet):
 
     def perform_destroy(self, instance):
         instance.delete()
-
-
-class AdminTodoViewSet(ModelViewSet):
-    authentication_classes = [JWTAuthentication]
-    serializer_class = TodoSerializer
-    permission_classes = [IsAdminUser]
-    queryset = Todo.objects.all()
