@@ -1,4 +1,7 @@
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.decorators import action
+from rest_framework import status
+from rest_framework.response import Response
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework.permissions import IsAdminUser
 from rest_framework.exceptions import PermissionDenied
@@ -28,3 +31,12 @@ class TodoViewSet(ModelViewSet):
 
     def perform_destroy(self, instance):
         instance.delete()
+
+    @action(detail=True, methods=["post"])
+    def complete(self, request, id=None):
+        todo = Todo.objects.get(pk=id)
+        todo.completed = not todo.completed
+        todo.save()
+        return Response(
+            {"status": "todo marked as complete"}, status=status.HTTP_200_OK
+        )
