@@ -24,6 +24,10 @@ This project is a backend implementation of a todo application. It provides a RE
 4. Apply the database migrations using `python manage.py migrate`.
 5. Start the server using `python manage.py runserver`.
 
+## Todo
+
+[😢] Add Social auth
+
 ## Try The endpoints?
 
 **You can try the Api Endpoints Through :**
