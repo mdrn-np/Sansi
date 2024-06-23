@@ -1,3 +1,8 @@
-from django.urls import path
+from rest_framework import routers
+from topics.views import TopicViewSet, CategoryViewSet
 
-urlpatterns = []
+router = routers.DefaultRouter()
+router.register(r"", TopicViewSet)
+router.register(r"categories", CategoryViewSet)
+
+urlpatterns = router.urls
