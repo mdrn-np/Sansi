@@ -1,0 +1,3 @@
+[submodule "echo-ode-frontend"]
+	path = frontend
+	url = https://github.com/DahalPratik/echo-ode-frontend.git
