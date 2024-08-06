@@ -1,3 +1,6 @@
 [submodule "frontend"]
 	path = frontend
 	url = https://github.com/munannoo/frontend
+[submodule "backend"]
+	path = backend
+	url = https://github.com/PhuyalGaurav/sansi-backend.git
