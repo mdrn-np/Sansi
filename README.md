@@ -2,4 +2,4 @@
 A spaced repetation application for students.
 
 # To clone
-`git clone --recurse-submodules https://github.com/0mdrn/Sansi.git`
+`git clone --recurse-submodules https://github.com/phuyalgaurav/Sansi.git`
