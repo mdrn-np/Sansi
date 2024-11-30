@@ -1,7 +1,6 @@
 [submodule "frontend"]
 	path = frontend
 	url = https://github.com/munannoo/frontend
-
-[submodule "dj-backend"]
-	path = dj-backend
+[submodule "Django Backend"]
+	path = Django Backend
 	url = https://github.com/PhuyalGaurav/sansi-dj-backend.git
